@@ -1,0 +1,8 @@
+D:\Sneghka\Visual Studio\Block 6\Draughts\Draughts\bin\Debug\Draughts.exe.config
+D:\Sneghka\Visual Studio\Block 6\Draughts\Draughts\obj\Debug\Draughts.csprojResolveAssemblyReference.cache
+D:\Sneghka\Visual Studio\Block 6\Draughts\Draughts\bin\Debug\Draughts.exe
+D:\Sneghka\Visual Studio\Block 6\Draughts\Draughts\bin\Debug\Draughts.pdb
+D:\Sneghka\Visual Studio\Block 6\Draughts\Draughts\bin\Debug\BussinessLogic.dll
+D:\Sneghka\Visual Studio\Block 6\Draughts\Draughts\bin\Debug\BussinessLogic.pdb
+D:\Sneghka\Visual Studio\Block 6\Draughts\Draughts\obj\Debug\Draughts.exe
+D:\Sneghka\Visual Studio\Block 6\Draughts\Draughts\obj\Debug\Draughts.pdb
