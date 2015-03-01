@@ -9,7 +9,7 @@ namespace BussinessLogic
 
     public class Square
     {
-        private string NamesOfVerticals = "abcdefgh";
+        private string NamesOfHorizontals = "abcdefgh";
         public int Horizontal { get; private set; }
 
         public int Vertical { get; private set; }
@@ -18,7 +18,7 @@ namespace BussinessLogic
         {
             var horizontalChar = line[0];
 
-            Horizontal = NamesOfVerticals.IndexOf(horizontalChar) + 1;
+            Horizontal = NamesOfHorizontals.IndexOf(horizontalChar) + 1;
             
             Vertical = Convert.ToInt32(line.Substring(1));
         }
@@ -31,7 +31,7 @@ namespace BussinessLogic
 
         public char NameVertical(int i)
         {
-            var nameVertical = NamesOfVerticals[i - 1];
+            var nameVertical = NamesOfHorizontals[i - 1];
             return nameVertical;
         }
 

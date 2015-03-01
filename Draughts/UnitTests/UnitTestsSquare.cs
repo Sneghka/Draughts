@@ -60,7 +60,7 @@ namespace UnitTests
             var moves = board.PossibleMoves(draught);
             var firstmove = moves[0];
             var secondmove = moves[1];
-            Assert.AreEqual(false, firstmove.IsSquareTrue());
+            Assert.AreEqual(null, moves[0]);
             Assert.AreEqual(true, secondmove.IsSquareTrue());
         }
 
@@ -73,8 +73,8 @@ namespace UnitTests
             var moves = board.PossibleMoves(draught);
             var firstmove = moves[0];
             var secondmove = moves[1];
-            Assert.AreEqual(false, firstmove.IsSquareTrue());
-            Assert.AreEqual(false, secondmove.IsSquareTrue());
+            Assert.AreEqual(null, moves[0]);
+            Assert.AreEqual(null, moves[1]);
         }
 
         [Test]
