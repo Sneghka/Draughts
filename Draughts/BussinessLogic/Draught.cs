@@ -37,8 +37,8 @@ namespace BussinessLogic
         public bool AreDraughtCoordinatesCorrect()
         {
             return
-                (DraughtCoordinates.Horizontal % 2 != 0 && DraughtCoordinates.Vertical % 2 != 0) ||
-                  (DraughtCoordinates.Horizontal % 2 == 0 && DraughtCoordinates.Vertical % 2 == 0);
+                (DraughtCoordinates.FirstCoordinate % 2 != 0 && DraughtCoordinates.SecondCoordinate % 2 != 0) ||
+                  (DraughtCoordinates.FirstCoordinate % 2 == 0 && DraughtCoordinates.SecondCoordinate % 2 == 0);
         }
     }
 }

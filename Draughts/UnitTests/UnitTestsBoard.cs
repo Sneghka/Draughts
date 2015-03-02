@@ -21,10 +21,10 @@ namespace UnitTests
             var moves = board.PossibleMoves(draught);
             var firstMove = moves[0];
             var secondMove = moves[1];
-            Assert.AreEqual(8, moves[0].Vertical);
-            Assert.AreEqual(8, moves[0].Horizontal);
-            Assert.AreEqual(8, moves[1].Vertical);
-            Assert.AreEqual(6, moves[1].Horizontal);
+            Assert.AreEqual(8, moves[0].SecondCoordinate);
+            Assert.AreEqual(8, moves[0].FirstCoordinate);
+            Assert.AreEqual(8, moves[1].SecondCoordinate);
+            Assert.AreEqual(6, moves[1].FirstCoordinate);
         }
     }
 }

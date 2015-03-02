@@ -23,11 +23,8 @@ namespace Draughts
             var board = new Board();
             var turns = board.PossibleMoves(draught);
             foreach (var turn in turns)
-            {
-                if(turn != null)
-                Console.WriteLine("{0} = > {1}{2}",line, turn.NameVertical(turn.Horizontal),turn.Vertical);
-            }
-
+            Console.WriteLine("{0} = > {1}{2}",line, turn.NameVertical(turn.FirstCoordinate),turn.SecondCoordinate);
+            
             Console.ReadLine();
         }
     }

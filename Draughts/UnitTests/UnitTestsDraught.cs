@@ -19,8 +19,8 @@ namespace UnitTests
             var input = "bd8";
             var draught = new Draught(input);
             Assert.AreEqual(Colour.black, draught.DraughtColour);
-            Assert.AreEqual(4, draught.DraughtCoordinates.Horizontal);
-            Assert.AreEqual(8, draught.DraughtCoordinates.Vertical);
+            Assert.AreEqual(4, draught.DraughtCoordinates.FirstCoordinate);
+            Assert.AreEqual(8, draught.DraughtCoordinates.SecondCoordinate);
         }
 
         [Test]
@@ -29,8 +29,8 @@ namespace UnitTests
             var input = "wg3";
             var draught = new Draught(input);
             Assert.AreEqual(Colour.white, draught.DraughtColour);
-            Assert.AreEqual(7, draught.DraughtCoordinates.Horizontal);
-            Assert.AreEqual(3, draught.DraughtCoordinates.Vertical);
+            Assert.AreEqual(7, draught.DraughtCoordinates.FirstCoordinate);
+            Assert.AreEqual(3, draught.DraughtCoordinates.SecondCoordinate);
         }
 
         [Test]

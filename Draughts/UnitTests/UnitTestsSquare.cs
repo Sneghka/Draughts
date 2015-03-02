@@ -16,14 +16,14 @@ namespace UnitTests
         {
             var input = "a3";
             var vertical = new Square(input);
-            Assert.AreEqual(1,vertical.Horizontal);
+            Assert.AreEqual(1, vertical.FirstCoordinate);
         }
         [Test]
         public void NumberOfVerticalG()
         {
             var input = "g5";
             var vertical = new Square(input);
-            Assert.AreEqual(7, vertical.Horizontal);
+            Assert.AreEqual(7, vertical.FirstCoordinate);
         }
 
         [Test]
@@ -31,7 +31,7 @@ namespace UnitTests
         {
             var input = "g8";
             var horizontal = new Square(input);
-            Assert.AreEqual(8, horizontal.Vertical);
+            Assert.AreEqual(8, horizontal.SecondCoordinate);
         }
 
         [Test]
@@ -39,7 +39,7 @@ namespace UnitTests
         {
             var input = "a1";
             var horizontal = new Square(input);
-            Assert.AreEqual(1, horizontal.Vertical);
+            Assert.AreEqual(1, horizontal.SecondCoordinate);
         }
 
         [Test]
@@ -47,47 +47,25 @@ namespace UnitTests
         {
             var input = "b2";
             var vertical = new Square(input);
-            Assert.AreEqual('b', vertical.NameVertical(vertical.Horizontal));
+            Assert.AreEqual('b', vertical.NameVertical(vertical.FirstCoordinate));
         }
 
         [Test]
 
-        public void TestIsSquareTrueOne()
+        public void TestSquareIsNotTrue()
         {
-            var input = "wh4";
-            var draught = new Draught(input);
-            var board = new Board();
-            var moves = board.PossibleMoves(draught);
-            var firstmove = moves[0];
-            var secondmove = moves[1];
-            Assert.AreEqual(null, moves[0]);
-            Assert.AreEqual(true, secondmove.IsSquareTrue());
+            var square = new Square("h4");
+            var move = new Square(square.FirstCoordinate + 1, square.SecondCoordinate + 1);
+            Assert.AreEqual(false, move.IsSquareTrue());
+
         }
 
         [Test]
-        public void TestIsSquareTrueTwo()
+        public void TestSquareIsTrue()
         {
-            var input = "wh8";
-            var draught = new Draught(input);
-            var board = new Board();
-            var moves = board.PossibleMoves(draught);
-            var firstmove = moves[0];
-            var secondmove = moves[1];
-            Assert.AreEqual(null, moves[0]);
-            Assert.AreEqual(null, moves[1]);
-        }
-
-        [Test]
-        public void TestIsSquareTrueThree()
-        {
-            var input = "bd6";
-            var draught = new Draught(input);
-            var board = new Board();
-            var moves = board.PossibleMoves(draught);
-            var firstmove = moves[0];
-            var secondmove = moves[1];
-            Assert.AreEqual(true, firstmove.IsSquareTrue());
-            Assert.AreEqual(true, secondmove.IsSquareTrue());
+            var square = new Square("d6");
+            var move = new Square(square.FirstCoordinate + 1, square.SecondCoordinate + 1);
+            Assert.AreEqual(true, move.IsSquareTrue());
         }
     }
 }
