@@ -3,3 +3,7 @@ D:\Sneghka\Visual Studio\Block 6\Draughts\BussinessLogic\bin\Debug\BussinessLogi
 D:\Sneghka\Visual Studio\Block 6\Draughts\BussinessLogic\bin\Debug\BussinessLogic.pdb
 D:\Sneghka\Visual Studio\Block 6\Draughts\BussinessLogic\obj\Debug\BussinessLogic.dll
 D:\Sneghka\Visual Studio\Block 6\Draughts\BussinessLogic\obj\Debug\BussinessLogic.pdb
+D:\Sneghka\Visual Studio\Draughts\Draughts\BussinessLogic\bin\Debug\BussinessLogic.dll
+D:\Sneghka\Visual Studio\Draughts\Draughts\BussinessLogic\bin\Debug\BussinessLogic.pdb
+D:\Sneghka\Visual Studio\Draughts\Draughts\BussinessLogic\obj\Debug\BussinessLogic.dll
+D:\Sneghka\Visual Studio\Draughts\Draughts\BussinessLogic\obj\Debug\BussinessLogic.pdb

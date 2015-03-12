@@ -7,3 +7,12 @@ D:\Sneghka\Visual Studio\Block 6\Draughts\UnitTests\bin\Debug\nunit.framework.xm
 D:\Sneghka\Visual Studio\Block 6\Draughts\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
 D:\Sneghka\Visual Studio\Block 6\Draughts\UnitTests\obj\Debug\UnitTests.dll
 D:\Sneghka\Visual Studio\Block 6\Draughts\UnitTests\obj\Debug\UnitTests.pdb
+D:\Sneghka\Visual Studio\Draughts\Draughts\UnitTests\bin\Debug\UnitTests.dll
+D:\Sneghka\Visual Studio\Draughts\Draughts\UnitTests\bin\Debug\UnitTests.pdb
+D:\Sneghka\Visual Studio\Draughts\Draughts\UnitTests\bin\Debug\BussinessLogic.dll
+D:\Sneghka\Visual Studio\Draughts\Draughts\UnitTests\bin\Debug\nunit.framework.dll
+D:\Sneghka\Visual Studio\Draughts\Draughts\UnitTests\bin\Debug\BussinessLogic.pdb
+D:\Sneghka\Visual Studio\Draughts\Draughts\UnitTests\bin\Debug\nunit.framework.xml
+D:\Sneghka\Visual Studio\Draughts\Draughts\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+D:\Sneghka\Visual Studio\Draughts\Draughts\UnitTests\obj\Debug\UnitTests.dll
+D:\Sneghka\Visual Studio\Draughts\Draughts\UnitTests\obj\Debug\UnitTests.pdb

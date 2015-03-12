@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace BussinessLogic
 {
-    public enum Colour { white, black };
-
+    
     public class Draught
     {
 
@@ -19,26 +18,17 @@ namespace BussinessLogic
         public Draught(string str)
         {
             var draughtColourChar = str[0];
-            switch (draughtColourChar)
-            {
-                case 'w':
-                    DraughtColour = Colour.white;
-                    break;
-                case 'b':
-                    DraughtColour = Colour.black;
-                    break;
-            }
+            DraughtColour = Helper.DraughtColour(draughtColourChar);
 
             var CoordinatesString = str.Substring(1);
             DraughtCoordinates = new Square(CoordinatesString);
 
         }
 
-        public bool AreDraughtCoordinatesCorrect()
+       public bool AreDraughtCoordinatesCorrect()
         {
             return
-                (DraughtCoordinates.FirstCoordinate % 2 != 0 && DraughtCoordinates.SecondCoordinate % 2 != 0) ||
-                  (DraughtCoordinates.FirstCoordinate % 2 == 0 && DraughtCoordinates.SecondCoordinate % 2 == 0);
+                (DraughtCoordinates.FirstCoordinate % 2 == DraughtCoordinates.SecondCoordinate % 2);
         }
     }
 }

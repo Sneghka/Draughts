@@ -11,20 +11,35 @@ namespace Draughts
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a position of draught");
+            Console.WriteLine("Enter positions of draughts");
             string line = Console.ReadLine();
-            var draught = new Draught(line);
-            if (!draught.AreDraughtCoordinatesCorrect())
+            Console.WriteLine("Enter draught's colour which is going to move now. Two letters are possible 'w'- white or 'b' - black");
+            string str = Console.ReadLine();
+            if (!Helper.IsColourLetterCorrect(str[0]))
+            {
+                Console.WriteLine("Incorret colour's letter");
+                Console.ReadKey();
+                return;
+            }
+            var setOfDraughts = new SetOfDraughts(line);
+            if (!setOfDraughts.AreAllDraughtsCoordinatesCorrect())
             {
                 Console.WriteLine("Incorrect coordinates of draught");
                 Console.ReadKey();
                 return;
             }
-            var board = new Board();
-            var turns = board.PossibleMoves(draught);
-            foreach (var turn in turns)
-            Console.WriteLine("{0} = > {1}{2}",line, turn.NameVertical(turn.FirstCoordinate),turn.SecondCoordinate);
+
+            var possibleMovesForSetOfDraughts = setOfDraughts.PossibleMovesForSetOfDraughts(Helper.DraughtColour(str[0]));
+            if (possibleMovesForSetOfDraughts.Count == 0)
+            {
+                Console.WriteLine("Possible moves don't exist");
+                Console.ReadKey();
+                return;
+            }
+            foreach (var move in possibleMovesForSetOfDraughts)
+                    Console.WriteLine("{0} = > {1}{2}", line, move.NameVertical(move.FirstCoordinate), move.SecondCoordinate);
             
+
             Console.ReadLine();
         }
     }
