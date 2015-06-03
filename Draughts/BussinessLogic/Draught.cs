@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BussinessLogic
 {
-    
+
     public class Draught
     {
 
@@ -20,15 +20,20 @@ namespace BussinessLogic
             var draughtColourChar = str[0];
             DraughtColour = Helper.DraughtColour(draughtColourChar);
 
-            var CoordinatesString = str.Substring(1);
-            DraughtCoordinates = new Square(CoordinatesString);
-
+            var coordinatesString = str.Substring(1);
+            DraughtCoordinates = new Square(coordinatesString);
         }
 
-       public bool AreDraughtCoordinatesCorrect()
+        public string GetStringNameOfDraught(Draught draught)
         {
-            return
-                (DraughtCoordinates.FirstCoordinate % 2 == DraughtCoordinates.SecondCoordinate % 2);
+            if (draught.DraughtColour == Colour.white)
+                return "w" + draught.DraughtCoordinates.NameVertical(draught.DraughtCoordinates.FirstCoordinate) +
+                       draught.DraughtCoordinates.SecondCoordinate;
+            else
+            {
+                return "b" + draught.DraughtCoordinates.NameVertical(draught.DraughtCoordinates.FirstCoordinate) +
+                         draught.DraughtCoordinates.SecondCoordinate;   
+            }
         }
     }
 }

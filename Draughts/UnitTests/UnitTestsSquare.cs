@@ -52,11 +52,20 @@ namespace UnitTests
 
         [Test]
 
-        public void TestSquareIsNotTrue()
+        public void TestSquareIsNotTrue1()
         {
             var square = new Square("h4");
             var move = new Square(square.FirstCoordinate + 1, square.SecondCoordinate + 1);
             Assert.AreEqual(false, move.IsSquareTrue());
+
+        }
+
+        [Test]
+
+        public void TestSquareIsNotTrue2()
+        {
+            var square = new Square("h3");
+            Assert.AreEqual(false, square.IsSquareTrue());
 
         }
 
@@ -66,6 +75,14 @@ namespace UnitTests
             var square = new Square("d6");
             var move = new Square(square.FirstCoordinate + 1, square.SecondCoordinate + 1);
             Assert.AreEqual(true, move.IsSquareTrue());
+        }
+
+        [Test]
+        public void TestSquaresAreEqual()
+        {
+            var square1 = new Square("d6");
+            var square2 = new Square("d6");
+            Assert.AreEqual(true, square1.AreSquaresEqual(square2));
         }
     }
 }

@@ -42,6 +42,7 @@
     <Compile Include="Board.cs" />
     <Compile Include="Draught.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="Move.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetForDraughts.cs" />
     <Compile Include="Square.cs" />

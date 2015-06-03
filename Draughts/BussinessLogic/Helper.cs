@@ -20,14 +20,5 @@ namespace BussinessLogic
             return
               colour == 'w' || colour == 'b';
         }
-
-        public static bool IsListContainSquare(Square square, List<Square> list)
-        {
-            foreach (var element in list)
-            {
-                if (square.FirstCoordinate == element.FirstCoordinate && square.SecondCoordinate == element.SecondCoordinate ) return true;
-            }
-            return false;
-        }
     }
 }

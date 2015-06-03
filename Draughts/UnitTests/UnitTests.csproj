@@ -45,6 +45,7 @@
     <Compile Include="UnitTestsBoard.cs" />
     <Compile Include="UnitTestsDraught.cs" />
     <Compile Include="UnitTestsHelper.cs" />
+    <Compile Include="UnitTestsMove.cs" />
     <Compile Include="UnitTestsSetOfDraughts.cs" />
     <Compile Include="UnitTestsSquare.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -19,12 +19,12 @@ namespace UnitTests
             var draught = new Draught(input);
             var board = new Board();
             var moves = board.PossibleMoves(draught);
-            var firstMove = moves[0];
-            var secondMove = moves[1];
-            Assert.AreEqual(8, moves[0].SecondCoordinate);
-            Assert.AreEqual(8, moves[0].FirstCoordinate);
-            Assert.AreEqual(8, moves[1].SecondCoordinate);
-            Assert.AreEqual(6, moves[1].FirstCoordinate);
+            var firstMove = moves[0].Square;
+            var secondMove = moves[1].Square;
+            Assert.AreEqual(8, moves[0].Square.SecondCoordinate);
+            Assert.AreEqual(8, moves[0].Square.FirstCoordinate);
+            Assert.AreEqual(8, moves[1].Square.SecondCoordinate);
+            Assert.AreEqual(6, moves[1].Square.FirstCoordinate);
         }
     }
 }

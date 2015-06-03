@@ -24,24 +24,27 @@ namespace BussinessLogic
         {
             foreach (var draught in draughts)
             {
-                if (!draught.AreDraughtCoordinatesCorrect())
-                {
+                if(!draught.DraughtCoordinates.IsSquareTrue())
+               {
                     return false;
                 }
             }
             return true;
         }
 
-        public List<Square> GetCoordinatesSetOfDraught()
+        public bool ContainSquare(Square square)
         {
-            var coordinates = new List<Square>();
-            foreach (var draught in draughts) coordinates.Add(draught.DraughtCoordinates);
-            return coordinates;
+            foreach(var draught in draughts)
+            {
+                if(draught.DraughtCoordinates.AreSquaresEqual(square))
+                    return true;
+            }
+            return false;
         }
 
-        public List<Square> MovesForSetOfDraughts(Colour colour) 
+        public List<Move> MovesForSetOfDraughts(Colour colour) 
         {
-            var moves = new List<Square>();
+            var moves = new List<Move>();
             foreach (var draught in draughts)
             {
                 var board = new Board();
@@ -51,14 +54,12 @@ namespace BussinessLogic
             return moves;
         }
 
-        public List<Square> PossibleMovesForSetOfDraughts(Colour colour) 
+        public List<Move> PossibleMovesForSetOfDraughts(Colour colour) 
         {
-            var possibleMovesForSetOfDraughts = new List<Square>();
-            foreach (var move in MovesForSetOfDraughts(colour))
-            {
-                if (!Helper.IsListContainSquare(move, GetCoordinatesSetOfDraught()))
-                    possibleMovesForSetOfDraughts.Add(move);
-            }
+            var possibleMovesForSetOfDraughts = new List<Move>();
+            var moves = MovesForSetOfDraughts(colour);
+            foreach (var move in moves)
+            if (!ContainSquare(move.Square)) possibleMovesForSetOfDraughts.Add(move);
             return possibleMovesForSetOfDraughts;
         }
     }

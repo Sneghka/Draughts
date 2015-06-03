@@ -13,7 +13,8 @@ namespace Draughts
         {
             Console.WriteLine("Enter positions of draughts");
             string line = Console.ReadLine();
-            Console.WriteLine("Enter draught's colour which is going to move now. Two letters are possible 'w'- white or 'b' - black");
+            Console.WriteLine("Enter draught's colour which is going to move now.");
+            Console.WriteLine("Two letters are possible 'w'- white or 'b' - black");
             string str = Console.ReadLine();
             if (!Helper.IsColourLetterCorrect(str[0]))
             {
@@ -36,11 +37,13 @@ namespace Draughts
                 Console.ReadKey();
                 return;
             }
+
+            
             foreach (var move in possibleMovesForSetOfDraughts)
-                    Console.WriteLine("{0} = > {1}{2}", line, move.NameVertical(move.FirstCoordinate), move.SecondCoordinate);
+                    Console.WriteLine("{0} = > {1}{2}",move.Draught.GetStringNameOfDraught(move.Draught), move.Square.NameVertical(move.Square.FirstCoordinate), move.Square.SecondCoordinate);
             
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

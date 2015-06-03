@@ -7,3 +7,4 @@ D:\Sneghka\Visual Studio\Draughts\Draughts\BussinessLogic\bin\Debug\BussinessLog
 D:\Sneghka\Visual Studio\Draughts\Draughts\BussinessLogic\bin\Debug\BussinessLogic.pdb
 D:\Sneghka\Visual Studio\Draughts\Draughts\BussinessLogic\obj\Debug\BussinessLogic.dll
 D:\Sneghka\Visual Studio\Draughts\Draughts\BussinessLogic\obj\Debug\BussinessLogic.pdb
+D:\Sneghka\Visual Studio\Draughts\Draughts\BussinessLogic\obj\Debug\BussinessLogic.csprojResolveAssemblyReference.cache

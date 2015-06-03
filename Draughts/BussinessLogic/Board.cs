@@ -8,30 +8,33 @@ namespace BussinessLogic
 {
     public class Board
     {
-        private const int BOARD_SIZE = 8;
 
-        public List<Square> PossibleMoves(Draught draught)
+        public List<Move> PossibleMoves(Draught draught)
         {
-            var possibleMoves = new List<Square>();
-            var firstCoordinate_1 = draught.DraughtCoordinates.FirstCoordinate + 1;
-            var firstCoordinate_2 = draught.DraughtCoordinates.FirstCoordinate - 1;
-            int secondCoordinate;
-
-            if (draught.DraughtColour == Colour.black)
+            var possibleMovesForOneDraught = new List<Move>();
+            var firstCoordinate1 = draught.DraughtCoordinates.FirstCoordinate + 1;
+            var firstCoordinate2 = draught.DraughtCoordinates.FirstCoordinate - 1;
+            int secondCoordinate = draught.DraughtCoordinates.SecondCoordinate + ChooseDraughtColour(draught.DraughtColour);
+            foreach (var square in MovesForOneDraught(firstCoordinate1, firstCoordinate2, secondCoordinate))
             {
-                secondCoordinate = draught.DraughtCoordinates.SecondCoordinate - 1;
-                return Moves(firstCoordinate_1, firstCoordinate_2, secondCoordinate);
+                var move = new Move(draught, square);
+                possibleMovesForOneDraught.Add(move);
             }
-            secondCoordinate = draught.DraughtCoordinates.SecondCoordinate + 1;
-            return Moves(firstCoordinate_1, firstCoordinate_2, secondCoordinate);
+            return possibleMovesForOneDraught;
         }
 
-        public List<Square> Moves(int firstCoord_1, int firstCoord_2, int secondCoord)
+
+        public int ChooseDraughtColour(Colour colour)
+        {
+            return colour == Colour.white ? 1 : -1;
+        }
+
+        public List<Square> MovesForOneDraught(int firstCoord1, int firstCoord2, int secondCoord)
         {
             var moves = new List<Square>();
-            var firstMove = new Square(firstCoord_1, secondCoord);
+            var firstMove = new Square(firstCoord1, secondCoord);
             if (firstMove.IsSquareTrue()) moves.Add(firstMove);
-            var secondMove = new Square(firstCoord_2, secondCoord);
+            var secondMove = new Square(firstCoord2, secondCoord);
             if (secondMove.IsSquareTrue()) moves.Add(secondMove);
             return moves;
         }

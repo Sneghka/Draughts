@@ -9,7 +9,9 @@ namespace BussinessLogic
 
     public class Square
     {
-        private string NamesOfFirstCoordinates = "abcdefgh";
+        private const string NamesOfFirstCoordinates = "abcdefgh";
+
+        private const int BOARD_SIZE = 8;
         public int FirstCoordinate { get; private set; }
 
         public int SecondCoordinate { get; private set; }
@@ -38,7 +40,14 @@ namespace BussinessLogic
         public bool IsSquareTrue()
         {
             return
-              (SecondCoordinate > 0 && SecondCoordinate < 9) && (FirstCoordinate > 0 && FirstCoordinate < 9);
+              (SecondCoordinate > 0 && SecondCoordinate <= BOARD_SIZE) && (FirstCoordinate > 0 && FirstCoordinate <= BOARD_SIZE) && FirstCoordinate % 2 == SecondCoordinate % 2;
+        }
+
+        public bool AreSquaresEqual(Square square)
+        {
+            return
+                FirstCoordinate == square.FirstCoordinate &&
+                SecondCoordinate == square.SecondCoordinate;
         }
     }
 }

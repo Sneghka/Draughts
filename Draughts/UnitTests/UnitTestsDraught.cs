@@ -38,7 +38,7 @@ namespace UnitTests
         {
             var input = "wc3";
             var draught = new Draught(input);
-            Assert.AreEqual(true, draught.AreDraughtCoordinatesCorrect());
+            Assert.AreEqual(true, draught.DraughtCoordinates.IsSquareTrue());
         }
 
         [Test]
@@ -46,7 +46,7 @@ namespace UnitTests
         {
             var input = "wc2";
             var draught = new Draught(input);
-            Assert.AreEqual(false, draught.AreDraughtCoordinatesCorrect());
+            Assert.AreEqual(false, draught.DraughtCoordinates.IsSquareTrue());
         }
     }
 }
