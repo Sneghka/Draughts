@@ -48,5 +48,25 @@ namespace UnitTests
             var draught = new Draught(input);
             Assert.AreEqual(false, draught.DraughtCoordinates.IsSquareTrue());
         }
+
+        [Test]
+        public void DraughtsColourAreEqual()
+        {
+            var input1 = "wc2";
+            var input2 = "wb4";
+            var draught = new Draught(input1);
+            var draught1 = new Draught(input2);
+            Assert.AreEqual(true, draught.DraughtsColourAreEqual(draught1));
+        }
+
+        [Test]
+        public void DraughtsColourAreNotEqual()
+        {
+            var input1 = "wc2";
+            var input2 = "bb4";
+            var draught = new Draught(input1);
+            var draught1 = new Draught(input2);
+            Assert.AreEqual(false, draught.DraughtsColourAreEqual(draught1));
+        }
     }
 }

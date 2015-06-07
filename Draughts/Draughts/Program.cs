@@ -40,7 +40,7 @@ namespace Draughts
 
             
             foreach (var move in possibleMovesForSetOfDraughts)
-                    Console.WriteLine("{0} = > {1}{2}",move.Draught.GetStringNameOfDraught(move.Draught), move.Square.NameVertical(move.Square.FirstCoordinate), move.Square.SecondCoordinate);
+                    Console.WriteLine("{0} = > {1}{2}",move.Draught.ToString(), move.Square.NameVertical(move.Square.FirstCoordinate), move.Square.SecondCoordinate);
             
 
             Console.ReadKey();

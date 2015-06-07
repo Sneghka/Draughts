@@ -24,16 +24,18 @@ namespace BussinessLogic
             DraughtCoordinates = new Square(coordinatesString);
         }
 
-        public string GetStringNameOfDraught(Draught draught)
+        public override string ToString()
         {
-            if (draught.DraughtColour == Colour.white)
-                return "w" + draught.DraughtCoordinates.NameVertical(draught.DraughtCoordinates.FirstCoordinate) +
-                       draught.DraughtCoordinates.SecondCoordinate;
-            else
-            {
-                return "b" + draught.DraughtCoordinates.NameVertical(draught.DraughtCoordinates.FirstCoordinate) +
-                         draught.DraughtCoordinates.SecondCoordinate;   
-            }
+            var color = DraughtColour == Colour.white ? "w" : "b";
+            return color + DraughtCoordinates.NameVertical(DraughtCoordinates.FirstCoordinate) +
+                       DraughtCoordinates.SecondCoordinate;
+        }
+
+
+        public bool DraughtsColourAreEqual(Draught draught)
+        {
+            return DraughtColour == draught.DraughtColour;
         }
     }
 }
+

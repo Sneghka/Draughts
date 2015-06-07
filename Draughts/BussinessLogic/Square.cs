@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace BussinessLogic
 {
-
     public class Square
     {
         private const string NamesOfFirstCoordinates = "abcdefgh";
 
         private const int BOARD_SIZE = 8;
         public int FirstCoordinate { get; private set; }
-
         public int SecondCoordinate { get; private set; }
 
         public Square(string line)

@@ -14,3 +14,4 @@ D:\Sneghka\Visual Studio\Draughts\Draughts\Draughts\bin\Debug\BussinessLogic.pdb
 D:\Sneghka\Visual Studio\Draughts\Draughts\Draughts\obj\Debug\Draughts.csprojResolveAssemblyReference.cache
 D:\Sneghka\Visual Studio\Draughts\Draughts\Draughts\obj\Debug\Draughts.exe
 D:\Sneghka\Visual Studio\Draughts\Draughts\Draughts\obj\Debug\Draughts.pdb
+D:\Sneghka\Visual Studio\Draughts\Draughts\BussinessLogic\bin\Debug\Draughts.exe.config

@@ -24,8 +24,8 @@ namespace BussinessLogic
         {
             foreach (var draught in draughts)
             {
-                if(!draught.DraughtCoordinates.IsSquareTrue())
-               {
+                if (!draught.DraughtCoordinates.IsSquareTrue())
+                {
                     return false;
                 }
             }
@@ -34,15 +34,15 @@ namespace BussinessLogic
 
         public bool ContainSquare(Square square)
         {
-            foreach(var draught in draughts)
+            foreach (var draught in draughts)
             {
-                if(draught.DraughtCoordinates.AreSquaresEqual(square))
+                if (draught.DraughtCoordinates.AreSquaresEqual(square))
                     return true;
             }
             return false;
         }
 
-        public List<Move> MovesForSetOfDraughts(Colour colour) 
+        public List<Move> MovesForSetOfDraughts(Colour colour)
         {
             var moves = new List<Move>();
             foreach (var draught in draughts)
@@ -54,13 +54,29 @@ namespace BussinessLogic
             return moves;
         }
 
-        public List<Move> PossibleMovesForSetOfDraughts(Colour colour) 
+        public Draught GetDraughtFromSquare(Square sq)
+        {
+            foreach (var draught in draughts)
+            {
+                if (draught.DraughtCoordinates.AreSquaresEqual(sq)) return draught;
+            }
+            return null;
+        }
+
+        public List<Move> PossibleMovesForSetOfDraughts(Colour colour)
         {
             var possibleMovesForSetOfDraughts = new List<Move>();
             var moves = MovesForSetOfDraughts(colour);
             foreach (var move in moves)
-            if (!ContainSquare(move.Square)) possibleMovesForSetOfDraughts.Add(move);
+                if (!ContainSquare(move.Square)) 
+                    possibleMovesForSetOfDraughts.Add(move);
+                else
+                {
+                    if ((!move.Draught.DraughtsColourAreEqual(GetDraughtFromSquare(move.Square))) && (!ContainSquare(move.Capturing().Square)))
+                        possibleMovesForSetOfDraughts.Add(move.Capturing());
+                }
             return possibleMovesForSetOfDraughts;
         }
     }
 }
+

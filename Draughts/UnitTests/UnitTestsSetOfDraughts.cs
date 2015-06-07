@@ -75,5 +75,18 @@ namespace UnitTests
             Assert.AreEqual(false, setOfDraught.ContainSquare(square));
 
         }
+        
+        [Test]
+        public void GetDraughtColourFromSquare()
+        {
+            var input = "wc3 wa3 bb4";
+            var setOfDraught = new SetOfDraughts(input);
+            var square = new Square("b4");
+           // var draught = setOfDraught.GetDraughtFromSquare(square);
+            Assert.AreEqual(Colour.black,setOfDraught.GetDraughtFromSquare(square).DraughtColour);
+
+            //Assert.AreEqual("bb4", setOfDraught.GetDraughtFromSquare(square).ToString());
+
+        }
     }
 }
